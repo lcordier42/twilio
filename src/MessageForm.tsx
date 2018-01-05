@@ -1,10 +1,14 @@
 import * as React from "react";
 import * as PropTypes from "prop-types";
+
 import "./MessageForm.css";
+
 type MessageFormProps = {
     onMessageSend: (...args: any[]) => any;
 };
+
 type MessageFormState = {};
+
 class MessageForm extends React.Component<MessageFormProps, MessageFormState> {
     // @ts-ignore
     componentDidMount = () => {
