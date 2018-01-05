@@ -23,7 +23,9 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.3",
     "@types/node": "4.0.35",
+    "@types/prop-types": "^15.5.2",
     "@types/react": "^16.0.34",
     "@types/react-dom": "16.0.3",
     "@types/twilio": "0.0.9"

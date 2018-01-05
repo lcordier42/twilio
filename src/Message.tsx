@@ -1,6 +1,6 @@
 import * as React from 'react'
-import PropTypes from 'prop-types'
-import classNames from "classnames"
+import * as PropTypes from 'prop-types'
+import * as classNames from "classnames"
 import './Message.css'
 
 class Message extends React.Component<{author: string, body: string, me: boolean}>{
