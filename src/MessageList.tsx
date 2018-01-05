@@ -4,19 +4,18 @@ import * as PropTypes from "prop-types";
 import Message from "./Message";
 import "./MessageList.css";
 
-type MessageListProps = {};
+type MessageListProps = {
+    messages: [any];
+};
 type MessageListState = {};
 class MessageList extends React.Component<MessageListProps, MessageListState> {
-    // @ts-ignore
-    componentDidUpdate = () => {
-        // @ts-ignore
+    node: any;
+    componentDidUpdate() {
         this.node.scrollTop = this.node.scrollHeight;
-    };
+    }
     render() {
         return (
-            // @ts-ignore
             <div className="MessageList" ref={(node) => (this.node = node)}>
-                //@ts-ignore
                 {this.props.messages.map((message, i) => (
                     <Message key={i} {...message} />
                 ))}

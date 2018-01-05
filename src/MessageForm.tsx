@@ -10,16 +10,13 @@ type MessageFormProps = {
 type MessageFormState = {};
 
 class MessageForm extends React.Component<MessageFormProps, MessageFormState> {
-    // @ts-ignore
-    componentDidMount = () => {
-        // @ts-ignore
+    input: any;
+    componentDidMount() {
         this.input.focus();
-    };
+    }
     handleFormSubmit = (event: any) => {
         event.preventDefault();
-        // @ts-ignore
         this.props.onMessageSend(this.input.value);
-        // @ts-ignore
         this.input.value = "";
     };
     render() {
@@ -28,7 +25,6 @@ class MessageForm extends React.Component<MessageFormProps, MessageFormState> {
                 <div className="input-container">
                     <input
                         type="text"
-                        // @ts-ignore
                         ref={(node) => (this.input = node)}
                         placeholder="Enter your message..."
                     />
