@@ -1,16 +1,13 @@
 require("dotenv").load();
 
 const Twilio = require("twilio");
-// @ts-ignore
-const chance = new require("chance")();
 const express = require("express");
 const app = express();
-
+const chance = require("chance");
 const AccessToken = Twilio.jwt.AccessToken;
 const ChatGrant = AccessToken.ChatGrant;
 
-// @ts-ignore
-app.get("/token", function(req, res) {
+app.get("/token", function(req: any, res: any) {
     const token = new AccessToken(
         process.env.TWILIO_ACCOUNT_SID,
         process.env.TWILIO_API_KEY,
