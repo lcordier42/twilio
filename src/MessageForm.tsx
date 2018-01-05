@@ -7,7 +7,6 @@ export interface props {
 }
 
 export interface States {
-    input: any;
 }
 
 class MessageForm extends React.Component<props, States> {
