@@ -3,7 +3,8 @@ require("dotenv").load();
 const Twilio = require("twilio");
 const express = require("express");
 const app = express();
-const chance = require("chance");
+// @ts-ignore
+const chance = new require('chance')()
 const AccessToken = Twilio.jwt.AccessToken;
 const ChatGrant = AccessToken.ChatGrant;
 
